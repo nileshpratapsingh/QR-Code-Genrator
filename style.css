@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,7 +20,7 @@ body {
 #mainContainer {
     height: 100vh;
     width: 100vw;
-    background-image: url('./Images/qrBg.jpg');
+    background-image: url('./Images/qrBg.jpeg');
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -36,6 +36,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+   
+}
+
+.textContainer{
+     font-size: 2em
+}
+
+.homeContainer{
+    
 }
 
 .sidebar img {
@@ -46,19 +55,23 @@ body {
 .sidebar .textContainer h1, p {
     font-family: var(--font);
     margin-bottom: 5px;
+    color: #ffffff;
 }
 
 .home {
     height: 200px;
     width: 50%;
-    background-color: #fff;
-    box-shadow: 0 5px 10px black;
-    border-radius: 5px;
+    background-color: #3289c7d6;
+    box-shadow: 0 10px 100px rgba(36, 204, 238, 0.996);
+    border-radius: 8px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #fff;
+    backdrop-filter: blur(8px);           /* Add this line */
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .home h2 {
@@ -69,7 +82,7 @@ body {
     height: 25px;
     width: 80%;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.012);
     margin: 15px 0 25px;
     padding: 7px;
     font-size: 16px;
@@ -87,6 +100,11 @@ body {
     font-size: 16px;
     cursor: pointer;
     transition: transform 0.3s;
+}
+
+#generateBtn {
+    background-color: #3289c7d6;
+    box-shadow: 0px 0px 10px 10px #ffffff39;
 }
 
 #generateBtn:hover, #downloadBtn, #closeBtn {
@@ -107,9 +125,9 @@ body {
     align-items: center;
     opacity: 0;
     transform: scale(0);
-    transition: transform 0.5s ease-in-out,
-                opacity 0.5s,
-                bottom 0.5s ease-in-out;
+    transition: transform 0.1s ease-in-out,
+                opacity 0.1s,
+                bottom 0.1s ease-in-out;
 }
 
 #qrPopup.show {
