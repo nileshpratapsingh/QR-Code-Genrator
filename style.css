@@ -22,6 +22,9 @@ body {
     width: 100vw;
     background-image: url('https://res.cloudinary.com/de4cxdtfv/image/upload/v1762279620/qrBG_v7zwvc.webp');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,11 +39,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-   
+
 }
 
-.textContainer{
-     font-size: 2em;
+.textContainer {
+    font-size: 2em;
 }
 
 .sidebar img {
@@ -66,7 +69,7 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
-    backdrop-filter: blur(8px);           
+    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
 
@@ -74,32 +77,45 @@ body {
     font-family: var(--font);
 }
 
-.cursor{
+.cursor {
     position: relative;
     padding-top: 20px;
     width: 24em;
     margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
+    border-right: 2px solid rgba(255, 255, 255, .75);
     font-size: 1.5em;
     font-weight: bold;
     text-align: right;
     white-space: nowrap;
     overflow: hidden;
-    transform: translateY(-50%);    
+    transform: translateY(-50%);
 }
+
 /* Animation */
 .typewriter-animation {
-  animation: 
-    typewriter 2s steps(50) 1s 1 normal both, 
-    blinkingCursor 500ms steps(50) infinite normal;
+    animation:
+        typewriter 2s steps(50) 1s 1 normal both,
+        blinkingCursor 500ms steps(50) infinite normal;
 }
+
 @keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
-@keyframes blinkingCursor{
-  from { border-right-color: rgba(255,255,255,.75); }
-  to { border-right-color: transparent; }
+
+@keyframes blinkingCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
 }
 
 #qrInput {
@@ -150,8 +166,8 @@ body {
     opacity: 0;
     transform: scale(0);
     transition: transform 0.1s ease-in-out,
-                opacity 0.1s,
-                bottom 0.1s ease-in-out;
+        opacity 0.1s,
+        bottom 0.1s ease-in-out;
 }
 
 #qrPopup.show {
